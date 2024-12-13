@@ -15,15 +15,22 @@ print("the value of var is", var)
 var1 = 3
 print("var =", var, "var1 =", var1) # example of chaining variables in a print statement
 
-my_string = _ # this is a string
-my_string1 = _
+my_string = "this is a python string" # this is a string
+my_string1 = "this is another string"
 
 # print the value of both strings on one line
-
+print(my_string, my_string1)
 # print the value of both string on separate lines
+print(my_string)
+print(my_string1)
 
 # print the value of both strings on separate lines using one print statement
-
+print(my_string, "\n", my_string1)
 # print out the first character of one of the strings
-
+print(my_string[0])
 # print out a substring of length 3 from one of the strings
+print(my_string[0:3])
+print(my_string[2:])
+print("\"e\"")
+a,b,c = 1,"hi",2.5
+print(a,b,c)
