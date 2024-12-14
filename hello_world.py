@@ -34,3 +34,30 @@ print(my_string[2:])
 print("\"e\"")
 a,b,c = 1,"hi",2.5
 print(a,b,c)
+
+#types of variables
+print(type(a))
+print(type(b))
+print(type(c))
+
+#random numbers
+import random
+
+print(random.randrange(1,10))
+
+#for loops
+languages = ["python", "c++", "java"]
+for i in languages:
+    print(i)
+
+#while loops
+i=0
+while i<10:
+    print(i)
+    i+=1
+
+#functions
+def randomNum(x,y):
+    return random.randrange(x,y)
+
+print(randomNum(1,10))
