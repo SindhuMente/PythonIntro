@@ -94,3 +94,22 @@ my_int = str(my_int)
 # print(my_float)
 
 print(round(my_float))
+
+# Strings
+
+multi_word_str = "hey, hello, hi, how's it going?"
+# split the string up into 2 at one of the 
+
+# split the string up into multiple strings by using a built in string method
+
+'''write a function to print out every character in the string "hello" in the following 
+format: "the ith character in the string is: _", using a format string'''
+
+# print out the middle 2 characters in "hello" using negative indexing
+
+# replace the word hola with adios in the following string: "to say bye in spanish, we say hola"
+
+# remove the extra spaces in the following string: " he l l o o o    "
+
+# concatenate the following strings: "hi my name is ", & "shannu "
+
