@@ -98,18 +98,45 @@ print(round(my_float))
 # Strings
 
 multi_word_str = "hey, hello, hi, how's it going?"
-# split the string up into 2 at one of the 
 
+for x in range(5):
+    print(x)
+
+n = len(multi_word_str)
+print(n)
+# split the string up into 2 at one of the commas
+newString1 = None
+newString2 = None
+for i in range(len(multi_word_str)):
+    if multi_word_str[i] == ",":
+        newString1 = multi_word_str[:i]
+        newString2 = multi_word_str[i+1:]
+        break
+print(newString1,"\n", newString2)
+        
 # split the string up into multiple strings by using a built in string method
-
+y = multi_word_str.split(", ")
+for i in y:
+    print(i)
 '''write a function to print out every character in the string "hello" in the following 
 format: "the ith character in the string is: _", using a format string'''
-
+def printString(z):
+    for i in range(len(z)):
+        print(f"the {i}th character in the string is {z[i]}")
+printString("testing function")
 # print out the middle 2 characters in "hello" using negative indexing
-
+my_string = "hello"
+print(my_string[-2], my_string[-3])
 # replace the word hola with adios in the following string: "to say bye in spanish, we say hola"
-
+z = "to say bye in spanish, we say hola"
+print(z.replace("hola","adios"))
 # remove the extra spaces in the following string: " he l l o o o    "
-
+z = " he l l o o o    "
+newString = ""
+for i in range(len(z)):
+    if z[i] == " ":
+        continue
+    newString += z[i]
+print(newString)
 # concatenate the following strings: "hi my name is ", & "shannu "
-
+print("hi my name is " + "Shannu")
