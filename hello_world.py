@@ -61,3 +61,24 @@ def randomNum(x,y):
     return random.randrange(x,y)
 
 print(randomNum(1,10))
+
+
+# Numbers & type conversions (Casting)
+
+num0 = 12345
+num1 = 4.9
+num2 = 2e2
+
+# convert num0 to a float
+# convert num1 to an int
+# convert num2 to an int
+
+my_string = "12345 is a great number"
+my_string1 = "123"
+my_int = 1
+my_float = 2.3
+
+# convert my_string to an int
+# convert my_string1 to a float
+# convert my_int to a string
+# convert my_float to an int
