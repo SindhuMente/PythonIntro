@@ -70,15 +70,27 @@ num1 = 4.9
 num2 = 2e2
 
 # convert num0 to a float
+num0 = float(num0)
 # convert num1 to an int
+num1 = int(num1)
 # convert num2 to an int
+num2 = int(num2)
 
 my_string = "12345 is a great number"
 my_string1 = "123"
 my_int = 1
-my_float = 2.3
+my_float = 2.6
 
 # convert my_string to an int
+my_string = my_string[:5]
+print(int(my_string))
+
 # convert my_string1 to a float
+my_string1 = float(my_string1)
 # convert my_int to a string
+my_int = str(my_int)
 # convert my_float to an int
+# my_float = int(my_float)
+# print(my_float)
+
+print(round(my_float))
