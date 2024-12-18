@@ -190,3 +190,13 @@ print(x is y)
 x = ["apple", "banana"]
 y = ["apple", "banana"]
 print(x is y)
+
+
+class Solution(object):
+    def isPalindrome(self, x):
+        x = str(x)
+        for i in range(len(x)):
+            if x[i] != x[-i-1]:
+                return False
+        return True
+        
