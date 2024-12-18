@@ -144,12 +144,12 @@ print("hi my name is " + "Shannu")
 
 # write a function that takes in 1 number (n) and returns the nth number in the fibbonaci sequence
 def fibonacci(n):
-    if n == 0:
+    if n == 1:
         return 0
-    elif n == 1 or n == 2:
+    elif n == 2 or n == 3:
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
     
-print(fibonacci(8))
+print(fibonacci(6))
 
