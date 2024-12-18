@@ -151,5 +151,42 @@ def fibonacci(n):
     else:
         return fibonacci(n-1) + fibonacci(n-2)
     
-print(fibonacci(6))
+# print(fibonacci(6))
 
+
+my_string = "hi this is a string"
+my_string = my_string[0:3] + my_string[3:7].upper() + my_string[7:]
+# print(my_string)
+
+
+# these are all equivalent
+# print(not(5 == 4))
+# print(5 != 4)
+# print (5 is not 4)
+# print(not(5 is 4))
+
+# bool evaluation
+# anything that is a "non-zero" value is True
+# the default value of that variable is False
+# print(bool(1))
+# print(bool(0))
+# print(bool("text"))
+# print(bool(""))
+# print(bool(-1.0))
+# print(bool(0.0))
+
+
+# Operators
+# operators are essentially +, -, *, /
+# or, and, not, xor
+# ==, <, <=, >, >=, !=
+
+x = 8
+y = 8
+print(x is y) # TODO: revisit when learning about inheritance
+x = "123"
+y = "123"
+print(x is y)
+x = ["apple", "banana"]
+y = ["apple", "banana"]
+print(x is y)
