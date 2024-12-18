@@ -140,3 +140,16 @@ for i in range(len(z)):
 print(newString)
 # concatenate the following strings: "hi my name is ", & "shannu "
 print("hi my name is " + "Shannu")
+
+
+# write a function that takes in 1 number (n) and returns the nth number in the fibbonaci sequence
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+    
+print(fibonacci(8))
+
