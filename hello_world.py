@@ -435,7 +435,7 @@ my_interesting_function_2(first_name="Shannu", last_name="Mente")
 
 '''Hash Functions'''
 
-my_storage = [None for i in range(6)]
+my_storage = [None for i in range(10)]
 def my_hash_function(key: str):
     if key[0] == "a":
         return 0
@@ -447,6 +447,8 @@ def my_hash_function(key: str):
         return 3
     if key[0] == "e":
         return 4
+    if key[0] == "f":
+        return 6
     else:
         return 5
 
@@ -454,6 +456,7 @@ my_data_point_1 = ("apple", "an apple a day keeps the doctor away")  #key value
 my_data_point_2 = ("color", "green is the best color")
 my_data_point_3 = ("orange", "a fruit")
 my_data_point_4 = ("keyboard", "can't code without them")
+my_data_point_5 = ("function", "functions are cool")
 
 index = my_hash_function(my_data_point_1[0])
 my_storage[index] = my_data_point_1[1]
@@ -468,6 +471,69 @@ my_storage[index] = my_data_point_3[1]
 print(my_storage)
 
 index = my_hash_function(my_data_point_4[0])
-my_storage[index] = my_data_point_4[1]
+# my_storage[index] = my_data_point_4[1]
 print(my_storage)
 
+index = my_hash_function(my_data_point_5[0])
+my_storage[index] = my_data_point_5[1]
+print(my_storage)
+
+
+'''Side Quest: str.split()'''
+my_str = " hell o wo rld    i"
+# print(my_str.split()) # output = ['hell', 'o', 'wo', 'rld', 'i']
+
+'''Back to Hash functions'''
+'''Collison Resolution'''
+# Method 1 = Open Addressing
+
+# Linear Probing
+index = my_hash_function(my_data_point_4[0])
+if my_storage[index] is not None:
+    i = index + 1
+    if index == len(my_storage) - 1:
+        i = 0
+    while i != index:
+        if i == len(my_storage):
+            i = 0
+        elif my_storage[i] != None and i < len(my_storage):
+            i += 1
+        else:
+            my_storage[i] = my_data_point_4[1]
+            break
+
+# print(my_storage)
+my_storage = ['an apple a day keeps the doctor away', None, 'green is the best color', None, None, 'a fruit', 'functions are cool', None, None, None]
+
+# Quadratic Probing
+index = my_hash_function(my_data_point_4[0])
+if my_storage[index] is not None:
+    i = index + 3
+    if index == len(my_storage) - 3:
+        i = 0
+    while i != index:
+        if i == len(my_storage) - 3:
+            if my_storage[i] == None:
+                my_storage[i] = my_data_point_4[1]
+            i = 0
+        elif i == len(my_storage) - 2:
+            if my_storage[i] == None:
+                my_storage[i] = my_data_point_4[1]
+            i = 1
+        elif i == len(my_storage) - 1:
+            if my_storage[i] == None:
+                my_storage[i] = my_data_point_4[1]
+            i = 2
+        elif my_storage[i] != None and i < len(my_storage) - 3:
+            if my_storage[i] == None:
+                my_storage[i] = my_data_point_4[1]
+            i += 3
+        else:
+            my_storage[i] = my_data_point_4[1]
+            break
+
+print(my_storage)
+
+# Double Hashing
+
+# Method 2 = Chaining
